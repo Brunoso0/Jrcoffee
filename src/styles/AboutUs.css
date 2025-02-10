@@ -1,0 +1,227 @@
+/* styles/AboutUs.css */
+
+    .about-us {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .about-banner {
+        width: 100%;
+        object-fit: cover;
+        padding-top: 7vh;
+    }
+
+    .about-banner img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .section-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
+        padding: 50px 50px 200px 50px;
+    }
+    
+    .text-container {
+        max-width: 50%;
+    }
+    
+    .title {
+        font-size: 9rem;
+        padding-left: 5rem;
+        margin: 0;
+        color: #FBA951;
+        font-family: Essentials-Regular, sans-serif;
+        font-weight: 100;
+        width: 60%;
+    }
+    
+    .description-about {
+        font-size: 1.2rem;
+        width: 70%;
+        height: 200px;
+        overflow-y: scroll;
+        color: #333;
+        margin-top: 1rem;
+        line-height: 1.8;
+        position: relative;
+        padding-right: 15px; /* Espaço entre o texto e a barra de rolagem */
+        direction: rtl;
+    }
+
+    .description-about::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .description-about::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .description-about::-webkit-scrollbar-thumb {
+        background-color: #4e4e4e;
+        border-radius: 10px;
+        border: 4px solid #f1f1f1;
+    }
+
+    .description-about::-webkit-scrollbar-thumb:hover {
+        background: #191919;
+    }
+
+    .description-about > * {
+        direction: ltr;
+        padding-left: 15px;
+    }
+
+  .scroll-buttons {
+    display: flex;
+    margin-left: 9vw;
+  }
+  
+  .scroll-down, .scroll-up {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .scroll-down img, .scroll-up img {
+    width: 30px;
+    height: auto;
+  }
+
+  .section-intro, .section-team, .section-history {
+    scroll-margin-top: 80px; /* Ajuste de margem ao fazer scroll */
+  }
+  
+  .media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .image-large {
+    width: 700px;
+    border-radius: 10px;
+    opacity: 90%;
+  }
+
+  .image-large:hover {
+    opacity: 100%;
+    transition: opacity 0.4s ease;
+  }
+
+  .image-large:hover ~ .image-small {
+    opacity: 80%;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+  
+  .image-small {
+    width: 600px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    right: 20%;
+  }
+  
+  .section-team {
+    text-align: center;
+  }
+  
+  .team-banner img {
+      max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .team-content {
+    z-index: 1;
+  }
+  
+  .section-team h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    position: relative;
+    text-align: left;
+    font-family: Bahnschrift, sans-serif;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.team-content {
+    position: absolute;
+    top: 60%;
+    right: 16vw;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-team p {
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin: 0;
+    color: #ffffff;
+    font-family: Bahnschrift, sans-serif;
+}
+  
+  
+
+
+.section-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.history-banner {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.history-banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description-wrapper-history {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-history h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+.description-about-history {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    width: 70%;
+    overflow-y: scroll;
+    height: 300px;
+}
+
+.section-history p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    width: 70%;
+}
+
+.scroll-buttons-history {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 25%;
+}

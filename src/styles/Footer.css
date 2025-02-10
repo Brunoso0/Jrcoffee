@@ -1,0 +1,237 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EF9401;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 1rem;
+    padding: 5px 0 0 0;
+}
+
+.social-media-icons img {
+    width: 30px;
+}
+
+.social-media-title h2{
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    font-family: "Inter", serif;
+    font-weight: 300;
+}
+
+.social-media-title b {
+    font-style: italic;
+}
+
+.footer-info {
+    width: 80%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 350px 400px 400px 400px;
+    padding: 1rem;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+.footer-info h1, .footer-info p {
+    font-family: "Inter", serif;
+    font-weight: 300;
+    color: white;
+    margin: 10px;
+}
+
+.footer-info h1 {
+    font-weight: bold;
+}
+
+.icons-footer {
+    margin: 0 5px -2px 0; 
+    width: 15px;
+}
+
+.logo-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: "Inter", serif;
+    font-weight: 300;
+    background-color: #1b1f1e;
+    color: white;
+}
+
+.footer-credits a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.newsletter, .quick-links, .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+/* Responsividade */
+
+/* Responsividade para telas grandes */
+@media (min-width: 1025px) {
+    .logo-footer img{
+        width: 200px;
+    }
+
+    .footer-info {
+        width: 90%;
+        grid-template-columns: 350px 300px 300px 300px;
+    }
+}
+
+
+/* Responsividade para telas médias (768px a 1024px) */
+@media (max-width: 1024px) {
+    .social-media {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .social-media-title h2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .footer-info {
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      padding: 1rem 0;
+    }
+  
+    .footer-info h1,
+    .footer-info p {
+      font-size: 1rem;
+    }
+  
+    .icons-footer {
+      width: 12px;
+    }
+
+    .logo-footer img{
+        width: 200px;
+    }
+  
+    .footer-credits {
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  
+  /* Responsividade para telas pequenas (máximo de 768px) */
+  @media (max-width: 768px) {
+    .social-media {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .social-media-title h2 {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .footer-info {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .newsletter,
+    .quick-links,
+    .contact-info {
+      align-items: center;
+    }
+  
+    .footer-info h1,
+    .footer-info p {
+      font-size: 0.9rem;
+    }
+  
+    .icons-footer {
+      width: 10px;
+    }
+
+    .logo-footer img{
+        width: 200px;
+    }
+  
+    .footer-credits {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  }
+  
+  /* Responsividade para telas muito pequenas (máximo de 480px) */
+  @media (max-width: 480px) {
+    .social-media {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .social-media-title h2 {
+      font-size: 0.9rem;
+    }
+  
+    .footer-info {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .newsletter,
+    .quick-links,
+    .contact-info {
+      align-items: center;
+      padding: 0.5rem;
+    }
+  
+    .footer-info h1,
+    .footer-info p {
+      font-size: 0.8rem; 
+    }
+  
+    .icons-footer {
+      width: 8px;
+    }
+  
+    .footer-credits {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+
+    .logo-footer img{
+        width: 150px;
+    }
+  }
+  

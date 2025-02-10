@@ -1,0 +1,92 @@
+.featured-products {
+    padding: 20px;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo base para o carrossel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 4rem;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Estilo dos itens do carrossel */
+.product-item {
+    flex: 0 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    width: 10rem;
+    border-radius: 8px;
+}
+
+.product-item p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #232323;
+    font-family: Bahnschrift, sans-serif;
+    font-weight: 100;
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+    .carousel.mobile {
+        gap: 0.2rem;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .product-item img {
+        width: 6rem;  
+    }
+
+    .product-item p {
+        font-size: 14px;
+    }
+}
+
+/* Estilo para telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .featured-products {
+        padding: 0;
+    }
+
+    .carousel.tablet {
+        gap: 1rem;
+        padding-left: 250px;
+    }
+
+    .product-item img {
+        width: 9rem;
+    }
+
+    .product-item p {
+        font-size: 16px;
+    }
+}
+
+/* Estilo para telas grandes */
+@media (min-width: 1025px) {
+    .carousel.desktop {
+        gap: 1rem;
+    }
+
+    .product-item img {
+        width: 8rem;
+    }
+
+    .product-item p {
+        font-size: 18px;
+    }
+}

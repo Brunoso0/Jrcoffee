@@ -1,0 +1,214 @@
+/* General Styles */
+.gallery-banner {
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.gallery-banner-img img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gallery-banner-text h1, .gallery-banner-text h4 {
+    margin: 0;
+}
+
+.gallery-banner-text h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: Bahnschrift, sans-serif;
+}
+
+.gallery-banner-text h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: Bahnschrift, sans-serif;
+}
+
+.gallery-button {
+    padding: 15px 70px;
+    font-size: 1rem;
+    font-family: Bahnschrift, sans-serif;
+    background: linear-gradient(45deg, #EF4B4A, #6B1414);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gallery-button:hover {
+    background: linear-gradient(45deg, #eb5d5d, #9c1e1e);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+}
+
+.gallery-button2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gallery-button2 button {
+    padding: 15px 50px;
+    font-size: 1rem;
+    font-family: Bahnschrift, sans-serif;
+    background-color: #253733;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-button2 button:hover {
+    background-color: #1a252b;
+}
+
+.gallery-button2 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.gallery-button2 button:hover img {
+    filter: grayscale(0%);
+}
+
+/* Responsive Styles */
+
+/* Big Screens */
+@media (min-width: 1025px)  and (max-width: 1580px){
+    .gallery-banner-text h1 {
+        font-size: 3rem;
+        max-width: 1200px;
+        width: 100%;
+    }
+}
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    .gallery-banner-text h1 {
+        font-size: 2.5rem;
+        width: 700px;
+    }
+
+    .gallery-banner-text {
+        padding: 0px;
+    }
+
+    .gallery-banner-text h4 {
+        font-size: 1.2rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 200px);
+        gap: 8px;
+    }
+
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gallery-button {
+        padding: 10px 50px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .gallery-banner-text {
+        padding: 0px;
+    }
+
+    .gallery-banner-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-banner-text h4 {
+        font-size: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, auto);
+        gap: 5px;
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gallery-button {
+        padding: 8px 40px;
+        font-size: 0.8rem;
+    }
+
+    .gallery-button2 button {
+        padding: 10px 40px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .gallery-banner-text h1 {
+        font-size: 1rem;
+    }
+
+    .gallery-banner-text h4 {
+        font-size: 0.9rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, auto);
+        gap: 5px;
+    }
+
+    .gallery img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gallery-button {
+        padding: 5px 30px;
+        font-size: 0.7rem;
+    }
+
+    .gallery-button2 button {
+        padding: 8px 30px;
+    }
+}

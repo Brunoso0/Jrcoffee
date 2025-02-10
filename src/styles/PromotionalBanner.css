@@ -1,0 +1,306 @@
+/* styles/PromotionalBanner.css */
+
+.promotional-banner {
+    background-image: url('/public/img/retangulo.png'); /* Adicione a imagem de fundo */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    padding: 50px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .promotional-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Controla a largura da imagem de fundo */
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8; /* Transparência para o fundo */
+  }
+  
+  .promo-content {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima do fundo */
+    display: grid;
+    grid-template-columns: 1fr  0.6fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 80rem;
+    width: 100%;
+  }
+  
+  .promo-image {
+    display: flex;
+  }
+  
+  .promo-image img {
+    width: 25rem;
+    position: relative;
+    top: 8rem;
+  }
+  
+  .promo-text {
+    flex: 1;
+    text-align: left;
+    margin-top: 50px;
+  }
+  
+  .promo-text h1 {
+    font-size: 48px;
+    width: 50%;
+    font-family: 'Balgor', sans-serif;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  .promo-text h4 {
+    font-size: 24px;
+    font-family: 'Bahnschrift', sans-serif;
+    margin-bottom: 0;
+    color: #FE9F40;
+  }
+  
+  .promo-description {
+    color: #fff;
+    width: 65%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  .promo-button {
+    background-color: #B46A1F;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .promo-button:hover {
+    background-color: #cc8400;
+  }
+  
+  .promo-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 45px;
+}
+
+.promo-thumbnails img {
+    background-color: #ffffff;
+    max-width: 80px;
+    width: 100%;
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 55%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .promo-thumbnails img:hover {
+    transform: scale(1.01);
+  }
+  
+
+
+  /* Responsividade */
+
+  /* Responsividade para telas médias (máximo de 1024px) */
+@media (max-width: 1200px) {
+  .promotional-banner {
+    background-image: none;
+    background: rgb(70,106,100);
+  background: radial-gradient(circle, rgba(70,106,100,1) 0%, rgba(19,52,47,1) 100%);
+    padding: 30px;
+    margin-top: 80px;
+    flex-direction: column;
+    background-size: cover;
+  }
+
+  .promo-content {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    width: unset;
+    align-items: center;
+  }
+
+  .promo-image {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .promo-image img {
+    width: 20rem;
+    top: 0;
+  }
+
+  .promo-text h1 {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .promo-text h4 {
+    font-size: 20px;
+  }
+
+  .promo-description {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .promo-thumbnails {
+    grid-template-columns: repeat(3, 80px);
+    row-gap: 30px;
+    column-gap: 60px;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  .promo-thumbnails img {
+    max-width: 80px;
+    padding: 15px;
+  }
+}
+
+/* Responsividade para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+  .promotional-banner {
+    background-image: none;
+    background: rgb(70,106,100);
+  background: radial-gradient(circle, rgba(70,106,100,1) 0%, rgba(19,52,47,1) 100%);
+    padding: 30px;
+    margin-top: 80px;
+    flex-direction: column;
+    background-size: cover;
+  }
+
+  .promo-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .promo-image img {
+    width: 15rem;
+    top: 0;
+  }
+
+  .promo-text h1 {
+    font-size: 28px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .promo-text {
+    margin: 0;
+  }
+
+  .promo-text h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .promo-description {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    width: 90%;
+    margin: 0;
+  }
+
+  .promo-button {
+    font-size: 16px;
+    padding: 8px 15px;
+    width: auto;
+    display: block;
+  }
+
+  .promo-thumbnails {
+    grid-template-columns: repeat(3, 100px);
+    gap: 15px;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .promo-thumbnails img {
+    max-width: 50px;
+    padding: 10px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (máximo de 480px) */
+@media (max-width: 480px) {
+  .promotional-banner {
+    padding: 20px;
+    margin-top: 60px;
+    flex-direction: column;
+    background-size: cover;
+  }
+
+  .promo-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .promo-image img {
+    width: 12rem;
+    top: 0;
+  }
+
+  .promo-text h1 {
+    font-size: 28px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .promo-text {
+    margin: 0;
+  }
+
+  .promo-text h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .promo-description {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    width: 90%;
+    margin: 0;
+  }
+
+  .promo-button {
+    font-size: 16px;
+    padding: 8px 15px;
+    width: auto;
+    display: block;
+  }
+
+  .promo-thumbnails {
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .promo-thumbnails img {
+    max-width: 40px;
+    padding: 8px;
+  }
+}

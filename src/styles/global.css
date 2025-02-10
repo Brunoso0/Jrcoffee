@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'AmeliaBasic';
+    src: url('/src/fonts/Amelia-Basic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmeliaBasic-Bold';
+    src: url('/src/fonts/Amelia-Basic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmeliaBasic-Italic';
+    src: url('/src/fonts/Amelia-Basic-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Essentials-Regular';
+    src: url('/src/fonts/Essentials-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essentials-Italic';
+    src: url('/src/fonts/Essentials-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('/src/fonts/BAHNSCHRIFT.TTF') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Balgor';
+    src: url('/src/fonts/Balgor.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'AmeliaBasic', sans-serif;
+}

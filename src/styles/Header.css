@@ -1,0 +1,297 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 0 0;
+    background-color: transparent;
+    color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.logo img{
+    width: 100px;
+    padding-left: 2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #2e2e2e;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 2rem;
+}
+
+.login,
+.signup {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.login {
+    background-color: #DA6E00;
+    color: #000000;
+    border-radius: 25px;
+}
+
+.signup {
+    background-color: #128949;
+    color: #000000;
+    border-radius: 25px;
+}
+
+.login:hover,
+.signup:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Campo de busca */
+.container-header {
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+  }
+
+  .search_icon {
+    width: 30px;
+    cursor: pointer;
+  }
+  
+.mainbox {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    width: 230px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 160px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  
+  .checkbox:focus {
+    border: none;
+    outline: none;
+  }
+  
+  .checkbox:checked {
+    right: 10px;
+  }
+  
+  .checkbox:checked ~ .mainbox {
+    width: 50px;
+  }
+  
+  .checkbox:checked ~ .mainbox .search_input {
+    width: 0;
+    height: 0px;
+  }
+  
+  .checkbox:checked ~ .mainbox .iconContainer {
+    padding-right: 8px;
+  }
+  
+  .checkbox {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    z-index: 9;
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 170px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .search_input::placeholder {
+    color: rgba(134, 134, 134, 0.776);
+    text-align: right;
+  }
+  
+  .iconContainer {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: fit-content;
+    transition: all 0.3s ease;
+  }
+  
+  .search_icon {
+    box-sizing: border-box;
+    fill: white;
+    font-size: 1.3em;
+  }
+
+
+
+
+
+
+  /* Estilo do botão hambúrguer */
+  .burger {
+    position: relative;
+    width: 30px; /* Reduz a largura do botão */
+    height: 20px; /* Reduz a altura do botão */
+    cursor: pointer;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 3px; /* Reduz a espessura das barras */
+    width: 100%; /* Mantém a largura proporcional ao botão */
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px; /* Ajusta a posição da primeira linha */
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%; /* Ajusta a posição da linha do meio */
+    transform: translateY(-50%);
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%; /* Ajusta a posição da última linha */
+    transform: translateY(-100%);
+  }
+
+.burger.open span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+.burger.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 12px;
+}
+
+
+  /* Estilo para telas pequenas */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Oculta a navegação padrão */
+  }
+
+  .mainbox {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    width: 130px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 160px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  .search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .menu-toggle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .mobile-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-toggle:checked ~ .mobile-nav {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  
+}

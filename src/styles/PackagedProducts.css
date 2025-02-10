@@ -1,0 +1,319 @@
+/* styles/PackagedProducts.css */
+.packaged-products-section {
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 150px; 
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-container-custom {
+    width: 50%;
+    padding: 60px 0;
+}
+
+.swiper-slide {
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.product-item-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image-custom {
+    width: 250px; /* Tamanho padrão */
+    height: auto;
+    transition: transform 0.6s ease-in-out;
+}
+
+.product-text {
+    transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+    margin-top: 0;
+}
+
+.swiper-slide-active .product-text {
+    color: #ff6600; /* Cor quando a div estiver ativa */
+    font-weight: bold; /* Negrito quando a div estiver ativa */
+    margin-top: 50px;
+}
+
+.swiper-slide-active .product-name-custom {
+    color: #ff6600; /* Cor quando a div estiver ativa */
+    margin-top: 20px;
+}
+
+.product-name-custom {
+    font-family: bahnschrift, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.product-subtitle-custom {
+    font-family: bahnschrift, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 20px;
+    margin: 0;
+    background-color: #2C2B2B;
+}
+
+/* Slide central */
+.swiper-slide-active .product-image-custom {
+    transform: scale(1.3); /* Aumenta o slide central */
+    opacity: 1; /* Opacidade total */
+}
+
+/* Slides laterais */
+.swiper-slide:not(.swiper-slide-active) .product-image-custom {
+    transform: scale(0.8); /* Reduz tamanho dos slides laterais */
+    opacity: 0.8; /* Reduz opacidade dos slides laterais */
+}
+
+/* Botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #ff6600;
+}
+
+
+
+/* folhas */
+
+.folha1 {
+    position: absolute;
+    top: 0;
+    right: 31%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.folha2 {
+    position: absolute;
+    top: 50%;
+    right: 46%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.folha3 {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.folha3 img {
+    width: 15%;
+    height: auto;
+}
+
+.folha4 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 60%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.folha4 img {
+    width: 15%;
+    height: auto;
+}
+
+.qualidade {
+    position: absolute;
+    top: 0;
+    left: 23%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.qualidade img {
+    width: 4%;
+    height: auto;
+}
+
+/* Responsividade  */
+
+
+/* Responsividade para telas grandes  */
+@media (min-width: 1025px) and (max-width: 1580px ) {
+    .swiper-container-custom {
+        width: 90%; /* Ajusta a largura para telas médias */
+        padding: 40px 0;
+      }
+}
+
+/* Responsividade para telas médias (máximo de 1024px) */
+@media (max-width: 1024px) {
+    .packaged-products-section {
+      padding: 20px;
+      margin-top: 100px;
+    }
+  
+    .swiper-container-custom {
+      width: 90%; /* Ajusta a largura para telas médias */
+      padding: 40px 0;
+    }
+  
+    .product-image-custom {
+      width: 200px; /* Reduz tamanho padrão da imagem */
+    }
+  
+    .product-name-custom {
+      font-size: 18px;
+    }
+  
+    .product-subtitle-custom {
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 16px; /* Reduz tamanho dos botões */
+    }
+  
+    .folha1,
+    .folha2,
+    .folha3,
+    .folha4,
+    .qualidade {
+      display: none; /* Oculta os elementos decorativos em telas médias */
+    }
+  }
+  
+  /* Responsividade para telas pequenas (máximo de 768px) */
+  @media (max-width: 768px) {
+    .packaged-products-section {
+      padding: 10px;
+      margin-top: 50px;
+    }
+  
+    .swiper-container-custom {
+      width: 90%; /* Ajusta a largura para telas pequenas */
+      padding: 30px 0;
+    }
+
+    .swiper-slide-active .product-text { 
+        margin-top: 10px;
+    }
+
+    .product-text {
+        margin-top: -20px;
+        transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, margin-top 0.6s ease-in-out;
+    }
+  
+    .product-image-custom {
+      width: 150px; /* Reduz ainda mais o tamanho da imagem */
+    }
+  
+    .product-name-custom {
+      font-size: 16px;
+    }
+  
+    .product-subtitle-custom {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 14px; /* Ajusta tamanho dos botões */
+    }
+  
+    .swiper-slide-active .product-image-custom {
+      transform: scale(1.2); /* Ajusta o aumento do slide central */
+    }
+  
+    .swiper-slide:not(.swiper-slide-active) .product-image-custom {
+      transform: scale(0.7); /* Ajusta redução dos slides laterais */
+    }
+  
+    .folha1,
+    .folha2,
+    .folha3,
+    .folha4,
+    .qualidade {
+      display: none; /* Mantém os elementos decorativos ocultos */
+    }
+  }
+  
+  /* Responsividade para telas muito pequenas (máximo de 480px) */
+  @media (max-width: 480px) {
+    .packaged-products-section {
+      padding: 5px;
+      margin-top: 30px;
+    }
+
+    .swiper-slide-active .product-text { 
+        margin-top: 0;
+    }
+
+    .product-text {
+        margin-top: -20px;
+        transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, margin-top 0.6s ease-in-out;
+    }
+  
+    .swiper-container-custom {
+      width: 100%; /* Usa a largura total */
+      padding: 20px 0;
+    }
+  
+    .product-image-custom {
+      width: 120px; /* Reduz ainda mais o tamanho da imagem */
+    }
+  
+    .product-name-custom {
+      font-size: 14px;
+    }
+  
+    .product-subtitle-custom {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 12px; /* Ajusta tamanho dos botões para telas muito pequenas */
+    }
+  
+    .swiper-slide-active .product-image-custom {
+      transform: scale(1.1); /* Ajusta o aumento do slide central */
+    }
+  
+    .swiper-slide:not(.swiper-slide-active) .product-image-custom {
+      transform: scale(0.6); /* Ajusta redução dos slides laterais */
+    }
+  
+    .folha1,
+    .folha2,
+    .folha3,
+    .folha4,
+    .qualidade {
+      display: none; /* Elementos decorativos permanecem ocultos */
+    }
+  }
+  
