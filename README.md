@@ -16,7 +16,7 @@
 
 🔗 **Acesse o site oficial**: [JrCoffee] Ainda Indisponivel.
 
-![Preview](./img/café.png) <!-- Atualize com o caminho correto da imagem -->
+![Preview](./public/img/café.png) <!-- Atualize com o caminho correto da imagem -->
 
 ---
 
