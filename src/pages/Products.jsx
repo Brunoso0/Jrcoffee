@@ -27,6 +27,8 @@ function Products() {
     return textoMatch && categoriaMatch;
   });
 
+  const produtosDisponiveis = produtos.filter(item => item.Disponivel === 1);
+
   const agrupado = {};
   categorias.forEach((cat) => {
     const lista = produtosFiltrados.filter((p) => p.categoria_id === cat.id);

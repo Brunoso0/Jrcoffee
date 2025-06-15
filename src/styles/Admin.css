@@ -176,6 +176,88 @@ body {
   filter: brightness(1.08) drop-shadow(0 0 6px var(--cafe-danger));
 }
 
+.admin-formulario {
+  background: #fffdfa;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #a67c5211;
+  padding: 32px 18px 24px 18px;
+  max-width: 440px;
+  margin: 0 auto 36px auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admin-formulario h2 {
+  color: #7c5c3e;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.admin-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.admin-formulario input[type="text"],
+.admin-formulario input[type="number"],
+.admin-formulario textarea,
+.admin-formulario select {
+  padding: 9px 12px;
+  border: 1px solid #e0cfc2;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f5f2;
+  color: #4e342e;
+  transition: border 0.2s;
+}
+
+.admin-formulario input[type="text"]:focus,
+.admin-formulario input[type="number"]:focus,
+.admin-formulario textarea:focus,
+.admin-formulario select:focus {
+  border-color: #a67c52;
+  outline: none;
+}
+
+.admin-formulario textarea {
+  min-height: 48px;
+  max-height: 120px;
+  resize: vertical;
+}
+
+.admin-formulario input[type="file"] {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #7c5c3e;
+  font-size: 0.97rem;
+}
+
+.admin-formulario button {
+  background: #a67c52;
+  color: #fffdfa;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 1px 8px #a67c5211;
+}
+
+.admin-formulario button:hover {
+  background: #7c5c3e;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px #a67c5222;
+}
+
 @media (max-width: 800px) {
   .admin-grid {
     grid-template-columns: 1fr 1fr;
