@@ -81,8 +81,11 @@
 }
 
 .offer-item-img img {
-    max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
+
 
 .offer-item-img {
     max-width: 60%;
@@ -401,7 +404,7 @@
     }
   
     .offer-item-text {
-      width: 100%;
+      width: 60%;
       padding: 10px 0 10px;
     }
   
