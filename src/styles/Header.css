@@ -19,6 +19,7 @@
 .nav {
     display: flex;
     gap: 20px;
+    padding-right: 20px;
 }
 
 .nav a {
@@ -247,6 +248,7 @@
   .mobile-menu {
     display: flex;
     align-items: center;
+    padding-right: 10px;
   }
 
   .menu-toggle {

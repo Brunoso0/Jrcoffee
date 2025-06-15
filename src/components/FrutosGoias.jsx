@@ -3,19 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/ProductOffers.css';
 import api from '../services/api.js';
 
-function ProductOffers() {
+function FrutosGoias() {
   const [offers, setOffers] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get('/api/produtos')
+    api.get('/api/produtos/frutos-goias')
       .then((res) => {
         const topRated = res.data
           .sort((a, b) => Number(b.media_avaliacoes || 0) - Number(a.media_avaliacoes || 0))
           .slice(0, 9);
         setOffers(topRated);
       })
-      .catch((err) => console.error('Erro ao buscar ofertas:', err));
+      .catch((err) => console.error('Erro ao buscar produtos Frutos Goiás:', err));
   }, []);
 
   const isAuthenticated = false;
@@ -28,7 +28,7 @@ function ProductOffers() {
       estrelas,
       comentario: '',
     })
-      .then(() => api.get('/api/produtos'))
+      .then(() => api.get('/api/produtos/frutos-goias'))
       .then((res) => {
         const topRated = res.data
           .sort((a, b) => Number(b.media_avaliacoes || 0) - Number(a.media_avaliacoes || 0))
@@ -40,8 +40,8 @@ function ProductOffers() {
 
   return (
     <section className="product-offers">
-      <h2>Nossas Delícias</h2>
-      <h4>Os mais bem avaliados</h4>
+      <h2>Frutos Goiás</h2>
+      <h4>Os melhores sorvetes e picolés</h4>
       <div className="colored-line">
         <img src="/img/faixagay.png" alt="faixa" />
       </div>
@@ -51,12 +51,12 @@ function ProductOffers() {
           {offers.map((offer) => (
             <div key={offer.id} className="offer-item">
               <div className="offer-item-img">
-                {/* <div className="avaliations">
+                <div className="avaliations">
                   <img className="star" src="/icons/star.png" alt="estrela" />
                   <p>{Number(offer.media_avaliacoes || 0).toFixed(1)}</p>
-                </div> */}
+                </div>
                 <img
-                  src={`https://api.jrcoffee.com.br:5002${offer.imagem}`}
+                  src={`https://api.jrcoffee.com.br:5002${offer.image_path}`}
                   alt={offer.nome}
                   onError={(e) => { e.target.src = '/img/nda.png'; }}
                 />
@@ -64,7 +64,7 @@ function ProductOffers() {
               <div className="offer-item-text">
                 <div className="text-star">
                   <h3>{offer.nome}</h3>
-                  {/* <div className="rating">
+                  <div className="rating">
                     {[5, 4, 3, 2, 1].map((star) => (
                       <React.Fragment key={star}>
                         <input
@@ -77,7 +77,7 @@ function ProductOffers() {
                         <label htmlFor={`star${star}-${offer.id}`}></label>
                       </React.Fragment>
                     ))}
-                  </div> */}
+                  </div>
                 </div>
                 <p className="description">{offer.descricao}</p>
               </div>
@@ -86,7 +86,7 @@ function ProductOffers() {
         </div>
 
         <div className="seeMore">
-          <button className="seeMore-button" onClick={() => navigate('/menu')}>
+          <button className="seeMore-button" onClick={() => navigate('/products')}>
             Ver Mais
           </button>
         </div>
@@ -95,4 +95,4 @@ function ProductOffers() {
   );
 }
 
-export default ProductOffers;
+export default FrutosGoias;

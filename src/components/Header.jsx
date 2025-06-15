@@ -17,17 +17,20 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/img/LOGO.png" alt="Logo" />
+        <Link to="/">
+          <img src="/img/LOGO.png" alt="Logo" />
+        </Link>
       </div>
 
       {!isMobile ? (
         // Navegação para telas grandes
         <nav className="nav">
-          <Link to="/products">Produtos</Link>
+          <Link to="/" > Inicio </Link>
+          <Link to="/products">Frutos de Goiás</Link>
           <Link to="/menu">Cardápio</Link>
-          <Link to="/About-us">Sobre nós</Link>
-          <Link to="/contact">Contato</Link>
-          <Link to="/local">Local</Link>
+          {/* <Link to="/About-us">Sobre nós</Link> */}
+          {/* <Link to="/contact">Contato</Link> */}
+          {/* <Link to="/local">Local</Link> */}
         </nav>
       ) : (
         // Navegação para telas pequenas
@@ -41,17 +44,18 @@ function Header() {
           </button>
           {isMenuOpen && (
             <nav className="mobile-nav">
-              <Link to="/products" onClick={handleMenuToggle}>Produtos</Link>
-              <Link to="/menu" onClick={handleMenuToggle}>Cardápio</Link>
-              <Link to="/About-us" onClick={handleMenuToggle}>Sobre nós</Link>
-              <Link to="/contact" onClick={handleMenuToggle}>Contato</Link>
-              <Link to="/local" onClick={handleMenuToggle}>Local</Link>
+              <Link to="/" onClick={handleMenuToggle}>Inicio</Link>
+              <Link to="/products" onClick={handleMenuToggle}>Frutos de Goiás</Link>
+              <Link to="/menu" onClick={handleMenuToggle}>Nosso Cardápio</Link>
+              {/* <Link to="/About-us" onClick={handleMenuToggle}>Sobre nós</Link> */}
+              {/* <Link to="/contact" onClick={handleMenuToggle}>Contato</Link> */}
+              {/* <Link to="/local" onClick={handleMenuToggle}>Local</Link> */}
             </nav>
           )}
         </div>
       )}
 
-      <div className="search-login">
+      {/* <div className="search-login">
         <div className="container-header">
           <input defaultChecked className="checkbox" type="checkbox" />
           <div className="mainbox">
@@ -65,7 +69,7 @@ function Header() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

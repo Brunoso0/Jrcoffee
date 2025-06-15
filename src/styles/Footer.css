@@ -41,7 +41,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 350px 400px 400px 400px;
+    grid-template-columns: 350px 400px;
     padding: 1rem;
     background-color: #333;
     margin: 0 auto;
@@ -105,7 +105,7 @@
 
     .footer-info {
         width: 90%;
-        grid-template-columns: 350px 300px 300px 300px;
+        grid-template-columns: 350px 300px;
     }
 }
 
