@@ -82,7 +82,7 @@ function Admin() {
       {lista.map(item => (
         <div key={item.id} className="admin-card">
           <img src={getImageUrl(item)} alt={item.nome} />
-
+{/* force */}
           <input
             type="text"
             value={item.nome}
